@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Course Registration Form</title>
+</head>
+<body>
+
+<h2>Course Registration Form</h2>
+
+<form id="myForm">
+
+    <input type="text" name="name" placeholder="Enter Full Name"
+           pattern="[A-Za-z]+([ '-][A-Za-z]+)*" required><br><br>
+
+    <input type="email" name="email" placeholder="Enter Email"
+           required><br><br>
+
+    <input type="tel" name="mobile" placeholder="Enter Mobile Number"
+           pattern="[6-9][0-9]{9}" maxlength="10" required><br><br>
+
+    <input type="password" name="password" placeholder="Enter Password"
+           pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*]).{8,}"
+           title="Minimum 8 characters, uppercase, lowercase, number and special character"
+           required><br><br>
+
+    <select name="course" required>
+        <option value="">Select Course</option>
+        <option value="HTML">HTML</option>
+        <option value="CSS">CSS</option>
+        <option value="JavaScript">JavaScript</option>
+        <option value="Python">Python</option>
+        <option value="Java">Java</option>
+    </select><br><br>
+
+    <input type="submit" value="Register">
+
+</form>
+
+<script>
+document.getElementById("myForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    alert("Registration Successful!");
+    this.reset();
+});
+</script>
+
+</body>
+</html>
